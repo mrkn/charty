@@ -10,7 +10,7 @@ module Charty
       end
 
       private def draw_box_plot(backend)
-        plot_data = @plot_data.each do |group_data|
+        plot_data = @plot_data.map do |group_data|
           next nil if group_data.empty?
 
           group_data = Array(group_data)

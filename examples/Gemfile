@@ -6,13 +6,12 @@ git_source(:github) {|repo_name| "https://github.com/#{repo_name}" }
 
 gem 'mimemagic'
 
-install_if -> { RUBY_PLATFORM !~ /darwin|mswin|mingw/ } do
-  gem 'rbczmq'
-end
-
-gem 'cztop'
+gem 'ffi-rzmq'
 gem 'iruby'
+
+gem 'pycall', ">= 1.3.0"
 gem 'matplotlib'
+
 gem 'charty', path: ".."
 
 gem 'gruff'
